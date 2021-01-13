@@ -31,7 +31,7 @@ export default class Menu extends Component {
 
         let elHilo = await axios.post('/hilos', newThread);
 
-        //const newReply = {
+        //const newRespuesta = {
         //     idThread:,
         //     idAuthor: this.props.usuarioActual._id,
         //     titleThread: this.state.threadTitle,
@@ -39,8 +39,8 @@ export default class Menu extends Component {
         // }
 
 
-        // const res = await axios.post('/respuestas', newReply);
-        //await axios.post('/respuestas', newReply);
+        // const res = await axios.post('/respuestas', newRespuesta);
+        //await axios.post('/respuestas', newRespuesta);
         e.preventDefault();
     }
 

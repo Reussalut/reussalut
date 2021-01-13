@@ -16,7 +16,7 @@ const hiloSchema = new mongoose.Schema({
     bodyThread: {
         type: String,
         required: true
-    }
+    },
 }, { timestamps: true })
 
 const Hilo = mongoose.model('Hilo', hiloSchema);

@@ -23,12 +23,6 @@ export default class Hilos extends Component {
         })
     }
 
-    /*
-     *   El método recibe el idAuthor
-     *     y devuelve el nombre o nickname del usuario
-     *  
-     */
-
     getPerfil = (idAuthor) => {
         let auxPerfil = {};
         const usuario = this.state.usuarios.find(usuario => {
@@ -44,11 +38,6 @@ export default class Hilos extends Component {
 
         return auxPerfil;
     }
-
-    // crearRuta = (idThread) =>{
-    //     return `/Reply/${idThread}`
-    // }
-
 
     render() {
         return (
@@ -66,7 +55,7 @@ export default class Hilos extends Component {
                             </div>
 
                             <div className='initial-body-Thread' >
-                                <Link to='/Reply'>
+                                <Link to='/Respuesta'>
                                     <div className='initial-route-Thread'>
                                         <a className='initial-title-Thread' >
                                             {hilo.titleThread}

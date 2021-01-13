@@ -7,7 +7,7 @@ import Menu from '../components/Menu';
 import Hilos from '../components/Hilos'
 import Footer from '../components/Footer';
 import Logout from '../components/Logout';
-import Reply from '../components/Reply'
+import Respuesta from '../components/Respuesta';
 
 export default class Main extends Component {
 
@@ -15,7 +15,8 @@ export default class Main extends Component {
         super(props)
         this.state = {
             usuarioActual: {},
-            auth: localStorage.getItem('auth-token')
+            auth: localStorage.getItem('auth-token'),
+            threadSelect: null // Es estado del hilo seleccionado.
         }
 
     }
@@ -36,7 +37,7 @@ export default class Main extends Component {
                             <Menu usuarioActual={this.state.usuarioActual} />
                             <Switch>
                                 <Route path='/forum' component={Hilos} />
-                                <Route path='/reply' component={Reply} />
+                                <Route path='/respuesta' component={Respuesta} />
                                 <Route path='/logout' component={Logout} />
                             </Switch>
                             <Footer />

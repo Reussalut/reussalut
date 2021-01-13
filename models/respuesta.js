@@ -9,11 +9,11 @@ const respuestaSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    titleReply: {
+    titleRespuesta: {
         type: String,
         required: true
     },
-    bodyReply: {
+    bodyRespuesta: {
         type: String,
         required: true
     }

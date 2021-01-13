@@ -1,8 +1,8 @@
 const express = require('express')
 const router = new express.Router()
-const Respuesta = require('../models/respuesta')
+const Respuesta = require('../models/respuestaB')
 
-router.post('/respuestas', async (req, res) => {
+router.post('/respuestasB', async (req, res) => {
     const respuesta = new Respuesta(req.body)
 
     try {
@@ -13,7 +13,7 @@ router.post('/respuestas', async (req, res) => {
     }
 })
 
-router.get('/respuestas', async (req, res) => {
+router.get('/respuestasB', async (req, res) => {
     try {
         const respuestas = await Respuesta.find({})
         res.send(respuestas)
@@ -22,7 +22,7 @@ router.get('/respuestas', async (req, res) => {
     }
 })
 
-router.get('/respuestas/:id', async (req, res) => {
+router.get('/respuestasB/:id', async (req, res) => {
     const _id = req.params.id
 
     try {
@@ -38,9 +38,9 @@ router.get('/respuestas/:id', async (req, res) => {
     }
 })
 
-router.patch('/respuestas/:id', async (req, res) => {
+router.patch('/respuestasB/:id', async (req, res) => {
     const updates = Object.keys(req.body)
-    const allowedUpdates = ['idThread', 'idAuthor', 'titleRespuesta', 'bodyRespuesta']
+    const allowedUpdates = ['titleReply', 'bodyReply']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
 
     if (!isValidOperation) {
@@ -60,7 +60,7 @@ router.patch('/respuestas/:id', async (req, res) => {
     }
 })
 
-router.delete('/respuestas/:id', async (req, res) => {
+router.delete('/respuestasB/:id', async (req, res) => {
     try {
         const respuesta = await Respuesta.findByIdAndDelete(req.params.id)
 

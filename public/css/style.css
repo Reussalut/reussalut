@@ -186,7 +186,8 @@
   transform: translateY(4px);
 }
 
-/*  Estilo Componente Footer */
+/* Estilos EJS */
 #miFooter {
-  background-color: black !important;
+  background-color: white;
+  font-size: 20px;
 }
